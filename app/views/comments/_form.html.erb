@@ -1,0 +1,16 @@
+<%= form_with model: [@showarticle,@showarticle.comments.build] do |form|%>
+
+<div>
+    <%=form.label :user_name %>
+    <%=form.text_field :user_name %>
+</div>
+<div>
+    <%=form.label :body %>
+    <%=form.text_field :body %>
+</div>
+
+<div>
+    <%= form.submit%>
+</div>
+
+<% end %>

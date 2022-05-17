@@ -1,0 +1,14 @@
+<h1><%= @showarticle.title%></h1>
+<h1><%= @showarticle.body%></h1>
+<%# <h1><%= @showarticle.category.name%></h1> %>
+
+<li><%= link_to "Edit", edit_article_path(@showarticle) %></li>
+<li><%= button_to "Destroy", article_path(@showarticle), method: :delete %></li>
+
+<%= render @showarticle.comments %>
+
+
+
+<h1>Add comment</h1>
+
+<%= render 'comments/form' %>

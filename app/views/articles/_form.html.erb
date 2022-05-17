@@ -1,0 +1,18 @@
+<%= form_with model: formarticle do |form|%>
+    <div>
+        <%= form.label :title %>
+        <%= form.text_field :title%>
+    </div>
+    <div>
+        <%= form.label :body%>
+        <%= form.text_area :body%>
+    </div>
+     <div>
+        <%= form.select :category_id, :value => Category.all.map{|c| [c.name,c.id]}%>
+        <%# <%= form.select :category_id, :value => Category.all.map {|c| [c.name,c.id,]}%> 
+
+    </div>
+    <div>
+        <%= form.submit%>
+    </div>
+<% end %>
